@@ -15,10 +15,11 @@ Album.init(
             type: DataTypes.STRING,
             allowNull: false,
           },
-          description: {
+          genre: {
             type: DataTypes.STRING,
+            allowNull: false
           },
-          review_date: {
+          release_date: {
             type: DataTypes.DATE,
             allowNull: false,
             defaultValue: DataTypes.NOW,
