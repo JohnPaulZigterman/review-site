@@ -1,37 +1,28 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Album extends Model {}
+class Artist extends Model {}
 
-Album.init(
+Artist.init(
     {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
-        },
-        name: {
+          },
+          name: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
-        artist_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: 'artist',
-                key: 'id'
-            } 
-        }
-          
+          },
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'album',
+        modelName: 'artist',
     }
 );
 
-module.exports = Album;
+module.exports = Artist;
