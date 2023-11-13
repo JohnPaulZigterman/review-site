@@ -1,0 +1,17 @@
+[
+    {
+      "name": "John",
+      "email": "john@fakewebsite.com",
+      "password": "Footwork123!@#"
+    },
+    {
+      "name": "Musa",
+      "email": "musa@internet.com",
+      "password": "neatpassword456$%^"
+    },
+    {
+      "name": "Anthony",
+      "email": "anthony@dj.com",
+      "password": "house4ever!"
+    }
+  ]
