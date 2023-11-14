@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { User, SongReview, AlbumReview, Song, Album, Artist } = require('../../models');
-const songReview = require('../../models/songReview');
 
 router.get('/', (req, res) => {
     User.findAll({
