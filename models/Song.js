@@ -22,6 +22,12 @@ Song.init(
                 model: 'album',
                 key: 'id'
             } 
+        },
+        artist_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: 'artist',
+            key: 'id'
         }
           
     },
