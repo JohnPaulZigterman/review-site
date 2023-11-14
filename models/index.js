@@ -4,6 +4,7 @@ const Album = require('./Album');
 const Song = require('./Song');
 const AlbumReview = require('./albumReview');
 const SongReview = require('./songReview');
+const SongArtist = require('./SongArtist');
 
 User.hasMany(AlbumReview, {
     foreignKey: 'user_id'
@@ -51,13 +52,9 @@ Album.belongsTo(Artist, {
     onDelete: 'cascade'
 });
 
-Artist.hasMany(Song, {
-    foreignKey: 'artist_id'
-});
+Artist.belongsToMany(Song, { through: SongArtist, foreignKey: 'artist_id' });
 
-Song.belongsToMany(Artist, {
-    foreignKey: 'artist_id',
-})
+Song.belongsToMany(Artist, { through: SongArtist, foreignKey: 'song_id' });
 
 Album.hasMany(Song, {
     foreignKey: 'album_id',
