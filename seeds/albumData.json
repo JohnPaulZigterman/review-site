@@ -1,5 +1,46 @@
-[
+ [
     {
-        "name": 
+        "name": "Melodies From Mars",
+        "year": "1995",
+        "genre": "Electronic",
+        "label": "N/A",
+        "artist_id": 1
+    },
+    {
+        "name": "Feed Me Weird Things",
+        "year": "1996",
+        "genre": "Drill 'n' bass",
+        "label": "Rephlex",
+        "artist_id": 2
+    },
+    {
+        "name": "Feel Infinite",
+        "year": "2017",
+        "genre": "Electronic",
+        "label": "LuckyMe",
+        "artist_id": 3
+    },
+    {
+        "name": "Illmatic",
+        "year": "1994",
+        "genre": "Hip Hop",
+        "label": "Columbia",
+        "artist_id": 4
+    },
+    {
+        "name": "Be",
+        "year": "2005",
+        "genre": "Hip Hop",
+        "label": "GOOD Music ",
+        "artist_id": 5
+    },
+    {
+        "name": "ATLiens",
+        "year": "1996",
+        "genre": "Hip Hop",
+        "label": "LAface,Arista ",
+        "artist_id": 6
     }
 ]
+
+
