@@ -10,27 +10,20 @@ Album.init(
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
-          },
-          name: {
+        },
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
-          },
-          genre: {
-            type: DataTypes.STRING,
-            allowNull: false
-          },
-          release_date: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.NOW,
-          },
-          user_id: {
+        },
+        artist_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
-              model: 'user',
-              key: 'id',
-            },
-          },
+                model: 'artist',
+                key: 'id'
+            } 
+        }
+          
     },
     {
         sequelize,
@@ -38,7 +31,7 @@ Album.init(
         freezeTableName: true,
         underscored: true,
         modelName: 'album',
-      }
+    }
 );
 
 module.exports = Album;
