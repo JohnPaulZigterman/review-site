@@ -15,6 +15,18 @@ Album.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        year: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        genre: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        label: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         artist_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
