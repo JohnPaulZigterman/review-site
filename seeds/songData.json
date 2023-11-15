@@ -1,39 +1,35 @@
 
 [
     {
-        "name": "Melodies From Mars",
-        "song": "Fingerbib",
-        "album_id": 1
+        "name": "Fingerbib",
+        "album_id": 1,
+        "artist_id": 1
       
     },
     {
-        "name": "Feed Me Weird Things",
-        "song": "Squarepusher Theme",
-        "album_id": 2
+        "name": "Squarepusher Theme",
+        "album_id": 2,
+        "artist_id": 2
        
     },
     {
-        "name": "Feel Infinite",
-        "song": "Afterglow",
-        "album_id": 3
-     
+        "name": "Afterglow",
+        "album_id": 3,
+        "artist_id": 3
     },
     {
-        "name": "Illmatic",
-        "song": "Represent",
-        "album_id": 4
-     
+        "name": "Represent",
+        "album_id": 4,
+        "artist_id": 4
     },
     {
-        "name": "Be",
-        "song": "The Corner7",
-        "album_id": 5
-     
+        "name": "The Corner7",
+        "album_id": 5,
+        "artist_id": 5
     },
     {
-        "name": "ATLiens",
-        "song": "Two Dope Boyz (In a Cadillac)",
-        "album_id": 6
-     
+        "name": "Two Dope Boyz (In a Cadillac)",
+        "album_id": 6,
+        "artist_id": 6
     }
 ]

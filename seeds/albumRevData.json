@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Seminal Album",
+        "review": "Squarepusher has done it again, he is an undeniable genius.",
+        "album_id": 2,
+        "user_id": 1
+    },
+    {
+        "title": "Terrible Album",
+        "review": "It's just beeps and boops and loud drums.",
+        "album_id": 2,
+        "user_id": 2
+    }
+]

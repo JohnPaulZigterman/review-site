@@ -27,8 +27,8 @@ Song.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'song',
-                key: 'artist_id'
+                model: 'artist',
+                key: 'id'
             }
         }
           

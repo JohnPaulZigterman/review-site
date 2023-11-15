@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Fabulous Song!!",
+        "review": "I just love electronic music in general.",
+        "song_id": 1,
+        "user_id": 1
+    },
+    {
+        "title": "AWFUL!!",
+        "review": "I do NOT have robot ears.",
+        "song_id": 1,
+        "user_id": 2
+    }
+]
