@@ -1,10 +1,12 @@
+const sequelize = require('../config/connection');
+const { DataTypes } = require('sequelize');
+
 const User = require('./User');
 const Artist = require('./Artist');
 const Album = require('./Album');
 const Song = require('./Song');
 const AlbumReview = require('./albumReview');
 const SongReview = require('./songReview');
-const SongArtist = require('./SongArtist');
 
 User.hasMany(AlbumReview, {
     foreignKey: 'user_id'
@@ -15,13 +17,11 @@ User.hasMany(SongReview, {
 });
 
 AlbumReview.belongsTo(User, {
-    foreignKey: 'user_id',
-    onDelete: 'cascade'
+    foreignKey: 'user_id'
 });
 
 SongReview.belongsTo(User, {
-    foreignKey: 'user_id',
-    onDelete: 'cascade'
+    foreignKey: 'user_id'
 });
 
 SongReview.belongsTo(Song, {
@@ -49,12 +49,16 @@ Artist.hasMany(Album, {
 
 Album.belongsTo(Artist, {
     foreignKey: 'artist_id',
-    onDelete: 'cascade'
 });
 
-Artist.belongsToMany(Song, { through: SongArtist, foreignKey: 'artist_id' });
+Artist.hasMany(Song, {
+    foreignKey: 'artist_id',
+    onDelete: 'cascade',
+})
 
-Song.belongsToMany(Artist, { through: SongArtist, foreignKey: 'song_id' });
+Song.belongsTo(Artist, {
+    foreignKey: 'artist_id'
+})
 
 Album.hasMany(Song, {
     foreignKey: 'album_id',
@@ -62,8 +66,7 @@ Album.hasMany(Song, {
 });
 
 Song.belongsTo(Album, {
-    foreignKey: 'album_id',
-    onDelete: 'cascade'
+    foreignKey: 'album_id'
 });
 
 module.exports = { User, Artist, Album, Song, SongReview, AlbumReview };

@@ -1,25 +1,20 @@
 [
     {
-        "name": "Aphex Twin",
-        "artist_id": 1
+        "name": "Aphex Twin"
     },
     {
-        "name": "Squarepusher",
-        "artist_id": 2
+        "name": "Squarepusher"
     },
     {
-        "name": "Jacques Greene",
-        "artist_id": 3
+        "name": "Jacques Greene"
     },
     {
-        "name": "Nas",
-        "artist_id": 4
-    },  {
-        "name": "Common",
-        "artist_id": 5
+        "name": "Nas"
+    },  
+    {
+        "name": "Common"
     },
     {
-        "name": "Outkast",
-        "artist_id": 6
+        "name": "Outkast"
     }
 ]
