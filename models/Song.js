@@ -10,18 +10,28 @@ Song.init(
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
-          },
-          name: {
+        },
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
-          },
-          album_id: {
+        },
+        album_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
-              model: 'album',
-              key: 'id',
-            },
-          },
+                model: 'album',
+                key: 'id'
+            } 
+        },
+        artist_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'song',
+                key: 'artist_id'
+            }
+        }
+          
     },
     {
         sequelize,
@@ -29,7 +39,7 @@ Song.init(
         freezeTableName: true,
         underscored: true,
         modelName: 'song',
-      }
+    }
 );
 
 module.exports = Song;
