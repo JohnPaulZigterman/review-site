@@ -1,0 +1,9 @@
+{{#if user.comment.length}}
+{{#each user as |user| }}
+<button id="user-btn">{{user.name}}</button>
+<section id="user-container"></section>
+</section>
+{{/each}}
+{{/if}}
+<script src="/public/js/home.js"></script>
+
