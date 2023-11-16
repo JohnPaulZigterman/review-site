@@ -1,0 +1,23 @@
+<section>
+     {{#each songReviews as |songReview| }}
+         <div data-id="{{songReview.id}}">
+            <h3>{{songReview.song_id}}</h3>
+            <p>{{songReview.title}}</p>
+            <p>{{songReview.review}}</p>
+            <button type="button" class="btn btn-danger SongReviewDelete">Delete Song Review</button>
+        </div>
+    {{/each}}
+</section>
+<section>
+    {{#each albumReviews as |albumReview| }}
+        <div data-id="{{albumReview.id}}">
+            <h3>{{album.title}}</h3>
+            <p>{{albumReview.title}}</p>
+            <p>{{albumReview.review}}</p>
+            <button type="button" class="btn btn-danger albumReviewDelete">Delete Album Review</button>
+        </div>
+    {{/each}}
+</section>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="/public/js/deleteReview.js"></script>
