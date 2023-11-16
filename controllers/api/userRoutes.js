@@ -1,4 +1,5 @@
 const router = require('express').Router();
+var session = require('express-session');
 const { User, SongReview, AlbumReview, Song, Album, Artist } = require('../../models');
 
 router.get('/', (req, res) => {
@@ -24,7 +25,6 @@ router.get('/:id', (req, res) => {
                 'id',
                 'title',
                 'review',
-                'created_at'
             ],
             include: {
                 model: Album,
@@ -41,7 +41,6 @@ router.get('/:id', (req, res) => {
                 'id',
                 'title',
                 'review',
-                'created_at'
             ],
             include: {
                 model: Song,
@@ -88,7 +87,6 @@ router.post('/login', (req, res) => {
             req.session.loggedIn = true;
             req.session.name = userData.name;
             req.session.id = userData.id;
-
             res.json({ user: userData, message: 'Logged In Successfully!' });
         });
     })
