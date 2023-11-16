@@ -1,4 +1,5 @@
 const router = require('express').Router();
+var session = require('express-session');
 const { User, SongReview, AlbumReview, Song, Album, Artist } = require('../../models');
 
 router.get('/', (req, res) => {
@@ -24,7 +25,6 @@ router.get('/:id', (req, res) => {
                 'id',
                 'title',
                 'review',
-                'created_at'
             ],
             include: {
                 model: Album,
@@ -41,7 +41,6 @@ router.get('/:id', (req, res) => {
                 'id',
                 'title',
                 'review',
-                'created_at'
             ],
             include: {
                 model: Song,
@@ -80,16 +79,16 @@ router.post('/login', (req, res) => {
             res.status(404).json({ message: 'No user in database with that name!'});
             return;
         }
-        if (!userData.passCheck(req.body.password)) {
+        if (!userData.checkPassword(req.body.password)) {
             res.status(400).json({ message: 'Invalid Password!' });
             return;
         }
         req.session.save(() => {
             req.session.loggedIn = true;
+            req.session.user_id = userData.id;
             req.session.name = userData.name;
             req.session.id = userData.id;
-
-            res.json({ user: userData, message: 'Logged In Successfully!' });
+            res.json({ message: `Logged In Successfully! User ID: ${req.session.user_id}` });
         });
     })
     .catch(err => {
