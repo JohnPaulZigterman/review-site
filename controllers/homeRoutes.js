@@ -10,60 +10,42 @@ router.get('/', (req, res) => {
         ],
         include: [
             {
-                Model: AlbumReview,
-                attributes: [
-                    'id',
-                    'title',
-                    'review',
-                    'album_id'
-                ],
-                include: {
-                    model: Album,
-                    attributes: [
-                        'id',
-                        'name',
-                        'artist_id'
-                    ],
-                    include: {
-                        model: Artist,
-                        attributes: ['name']
+                model: AlbumReview,
+                include: [
+                    {
+                        model: Album,
+                        include: [
+                            {
+                                model: Artist
+                            }
+                        ]
                     }
-                }
+                ]
             },
             {
                 model: SongReview,
-                attributes: [
-                    'id',
-                    'title',
-                    'review',
-                    'song_id'
-                ],
-                include: {
-                    model: Song,
-                    attributes: [
-                        'id',
-                        'name',
-                        'album_id'
-                    ],
-                    include: {
-                        model: Album,
-                        attributes: [
-                            'id',
-                            'name',
-                            'artist_id'
-                        ],
-                        include: {
-                            model: Artist,
-                            attributes: ['name']
-                        }
+                include: [
+                    {
+                        model: Song,
+                        include: [
+                            {
+                                model: Album,
+                                include: [
+                                    {
+                                        model: Artist
+                                    }
+                                ]
+                            }
+                        ]
                     }
-                }
+                ]
             }
         ]
     })
     .then(userData => {
         const users = userData.map(user => user.get({ plain: true }));
         res.render('homepage', { users });
+//FOR TESTING        //res.status(200).json(userData);
     })
     .catch(err => {
         console.log(err);
