@@ -79,7 +79,7 @@ router.post('/login', (req, res) => {
             res.status(404).json({ message: 'No user in database with that name!'});
             return;
         }
-        if (!userData.passCheck(req.body.password)) {
+        if (!userData.checkPassword(req.body.password)) {
             res.status(400).json({ message: 'Invalid Password!' });
             return;
         }
@@ -87,7 +87,7 @@ router.post('/login', (req, res) => {
             req.session.loggedIn = true;
             req.session.name = userData.name;
             req.session.id = userData.id;
-            res.json({ user: userData, message: 'Logged In Successfully!' });
+            res.json({ message: 'Logged In Successfully!' });
         });
     })
     .catch(err => {
