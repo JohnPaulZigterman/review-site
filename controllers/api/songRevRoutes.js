@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, SongReview, AlbumReview, Song, Album, Artist } = require('../../models');
+const withAuth = require('../../utils/withauth');
 
 router.get('/', (req, res) => {
         SongReview.findAll({
@@ -71,6 +72,18 @@ router.get('/:id', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
+});
+
+router.post('/', withAuth, async (req, res) => {
+    try {
+        const newSongRev = await SongReview.create({
+            ...req.body,
+            user_id: req.session.user_id,
+        });
+        res.status(200).json(newSongRev);
+    } catch (err) {
+        res.status(500).json(err);
+    }
 });
 
 module.exports = router;

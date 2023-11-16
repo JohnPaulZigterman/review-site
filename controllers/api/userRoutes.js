@@ -85,9 +85,10 @@ router.post('/login', (req, res) => {
         }
         req.session.save(() => {
             req.session.loggedIn = true;
+            req.session.user_id = userData.id;
             req.session.name = userData.name;
             req.session.id = userData.id;
-            res.json({ message: 'Logged In Successfully!' });
+            res.json({ message: `Logged In Successfully! User ID: ${req.session.user_id}` });
         });
     })
     .catch(err => {
