@@ -106,7 +106,7 @@ router.put('/:id', withAuth, (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     SongReview.destroy({ where: { id: req.params.id } })
     .then(reviewData => {
         if(!reviewData) {

@@ -1,7 +1,8 @@
-{{#if user.comment.length}}
-{{#each user as |user| }}
-<button id="user-btn">{{user.name}}</button>
-<section id="user-container"></section>
+{{#if users.length}}
+{{#each users as |user| }}
+<button id="user-btn" href="/users/{{user.id}}">{{user.name}}</button>
+<section id="user-container">
+
 </section>
 {{/each}}
 {{/if}}
