@@ -4,7 +4,40 @@ const { User, SongReview, AlbumReview, Song, Album, Artist } = require('../../mo
 
 router.get('/', (req, res) => {
     User.findAll({
-        attributes: { exclude: ['password'] }
+        attributes: { exclude: ['password'] },
+        include: [
+            {
+                model: AlbumReview,
+                include: [
+                    {
+                        model: Album,
+                        include: [
+                            {
+                                model: Artist
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                model: SongReview,
+                include: [
+                    {
+                        model: Song,
+                        include: [
+                            {
+                                model: Album,
+                                include: [
+                                    {
+                                        model: Artist
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     })
     .then(userData => res.json(userData))
     .catch(err => {
