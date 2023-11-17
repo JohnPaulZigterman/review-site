@@ -38,4 +38,35 @@ router.post('/', async (req, res) => {
     }
 });
 
+router.put('/:id', (req, res) => {
+    Artist.update(req.body, {
+        where: { id: req.params.id }
+    })
+    .then(artistData => {
+        if (!artistData) {
+            res.status(404).json('No Artist With That ID!');
+            return;
+        }
+        res.json(artistData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+router.delete('/:id', (req, res) => {
+    Artist.destroy({ where: { id: req.params.id } })
+    .then(artistData => {
+        if(!artistData) {
+            res.status(404).json({ message: 'No Artist With That ID!' });
+        }
+        res.status(200).json(artistData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 module.exports = router;
