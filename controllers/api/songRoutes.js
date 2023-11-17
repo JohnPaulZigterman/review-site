@@ -38,4 +38,35 @@ router.post('/', async (req, res) => {
     }
 });
 
+router.put('/:id', (req, res) => {
+    Song.update(req.body, {
+        where: { id: req.params.id }
+    })
+    .then(songData => {
+        if (!songData) {
+            res.status(404).json('No Song With That ID!');
+            return;
+        }
+        res.json(songData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+router.delete('/:id', (req, res) => {
+    Song.destroy({ where: { id: req.params.id } })
+    .then(songData => {
+        if(!songData) {
+            res.status(404).json({ message: 'No Song With That ID!' });
+        }
+        res.status(200).json(songData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 module.exports = router;
