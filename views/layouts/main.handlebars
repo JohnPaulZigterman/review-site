@@ -13,13 +13,14 @@
     <header>
         <h1 >Review Site</h1>
          <nav>
-            <a href="/homepage">home</a>
-            <a href="/albumSongReview">Albums/Song</a>
-            {{#if logged_in}}
+            <a href="/">home</a>
+            <a href="/views/albumSongReview.handlebars">Albums/Song</a>
              <button type="button" class="btn btn-light" id="logout">logout</button>
-             <a href="/addReview">Add</a>
-             <a href="/UpdateReview">Update</a>
-             <a href="/DeleteReview">Delete</a>
+            {{#if loggedIn}}
+            
+             <a href="/views/addReview.handlebars">Add</a>
+             <a href="/views/UpdateReview.handlebars">Update</a>
+             <a href="/views/DeleteReview.handlebars">Delete</a>
             {{else}}
             <a href="/login">login</a>
             {{/if}}
@@ -32,9 +33,10 @@
 
     <footer>
     {{#if logged_in}}
-    <script src="/js/logout.js"></script>
+
     {{/if}}
+
     </footer>
 </body>
-
+        <script src="/js/logout.js"></script>
 </html>
