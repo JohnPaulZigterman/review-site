@@ -15,8 +15,9 @@
          <nav>
             <a href="/">home</a>
             <a href="/views/albumSongReview.handlebars">Albums/Song</a>
-            {{#if logged_in}}
              <button type="button" class="btn btn-light" id="logout">logout</button>
+            {{#if loggedIn}}
+            
              <a href="/views/addReview.handlebars">Add</a>
              <a href="/views/UpdateReview.handlebars">Update</a>
              <a href="/views/DeleteReview.handlebars">Delete</a>
@@ -32,9 +33,10 @@
 
     <footer>
     {{#if logged_in}}
-    <script src="/public/js/logout.js"></script>
+
     {{/if}}
+
     </footer>
 </body>
-
+        <script src="/js/logout.js"></script>
 </html>
