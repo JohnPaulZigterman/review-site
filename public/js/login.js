@@ -1,38 +1,26 @@
-$("#loginForm").submit(function(event) {
-    event.preventDefault();
-    const email = $('#email').val().trim();
-    const password = $('#password').val().trim();
+async function loginFormHandler(e) {
+    e.preventDefault();
+    const name = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
 
-    if (email && password) {
-        const response = fetch('/api/user/login', {
+    if (name && password) {
+        const res = await fetch('/api/users/login', {
             method: 'POST',
-            body: JSON.stringify({ email, password }),
-            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name,
+                password
+            }),
+            headers: { 'Content-Type': 'application/json' }
         });
-        if (response.ok) {
-            $(location).attr('href', '/addReview');
+
+        if (res.ok) {
+            document.location.replace('/');
+            alert('good!')
         } else {
-            alert(response.statusText);
+            alert(res.statusText);
         }
     }
-});
+}
 
-$("#signupForm").submit(function(event) {
-    event.preventDefault();
-    const name = $('#name').val().trim();
-    const email = $('#email').val().trim();
-    const password = $('#password').val().trim();
+document.getElementById('login-form').addEventListener('submit', loginFormHandler);
 
-    if (email && password && name) {
-        const response = fetch('/api/user/signup', {
-            method: 'POST',
-            body: JSON.stringify({ email, password, name }),
-            headers: { 'Content-Type': 'application/json' },
-        });
-        if (response.ok) {
-            $(location).attr('href', '/addReview');
-        } else {
-            alert(response.statusText);
-        }
-    }
-});
