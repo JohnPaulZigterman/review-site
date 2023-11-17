@@ -86,4 +86,38 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
+router.put('/:id', withAuth, (req, res) => {
+    SongReview.update(req.body, {
+        where: {
+            id: req.params.id,
+            user_id: req.session.user_id
+        }
+    })
+    .then(reviewData => {
+        if (!reviewData) {
+            res.status(404).json('No Review With That ID!');
+            return;
+        }
+        res.json(reviewData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+router.delete('/:id', (req, res) => {
+    SongReview.destroy({ where: { id: req.params.id } })
+    .then(reviewData => {
+        if(!reviewData) {
+            res.status(404).json({ message: 'No Review With That ID!' });
+        }
+        res.status(200).json(reviewData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 module.exports = router;

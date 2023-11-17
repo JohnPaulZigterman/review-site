@@ -38,4 +38,35 @@ router.post('/', async (req, res) => {
     }
 });
 
+router.put('/:id', (req, res) => {
+    Album.update(req.body, {
+        where: { id: req.params.id }
+    })
+    .then(albumData => {
+        if (!albumData) {
+            res.status(404).json('No Album With That ID!');
+            return;
+        }
+        res.json(albumData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+router.delete('/:id', (req, res) => {
+    Album.destroy({ where: { id: req.params.id } })
+    .then(albumData => {
+        if(!albumData) {
+            res.status(404).json({ message: 'No Album With That ID!' });
+        }
+        res.status(200).json(albumData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 module.exports = router;
