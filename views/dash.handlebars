@@ -27,8 +27,8 @@
                     <p>{{review}}</p>
                 </section>
                 <section class="card-footer">
-                    <button type="button" class="btn btn-primary btn-sm" id="edit-albumrev-{{albumreview.id}}">Edit Review</button>
-                    <button type="button" class="btn btn-danger btn-sm" id="delete-albumrev-{{albumreview.id}}">Delete Review</button>
+                    <button type="button" class="btn btn-primary btn-sm AlbumReviewUpdate" data-id="{{albumreview.id}}">Edit Review</button>
+                    <button type="button" class="btn btn-danger btn-sm AlbumReviewDelete" data-id="{{albumreview.id}}">Delete Review</button>
                 </section>
             </div>
             {{/each}}
@@ -59,8 +59,8 @@
                     <p>{{review}}</p>
                 </section>
                 <section class="card-footer">
-                    <button type="button" class="btn btn-primary btn-sm" id="edit-songrev-{{songreview.id}}">Edit Review</button>
-                    <button type="button" class="btn btn-danger btn-sm" id="delete-songrev-{{songreview.id}}">Delete Review</button>
+                    <button type="button" class="btn btn-primary btn-sm SongReviewUpdate" data-id="{{songreview.id}}">Edit Review</button>
+                    <button type="button" class="btn btn-danger btn-sm SongReviewDelete" data-id="{{songreview.id}}">Delete Review</button>
                 </section>
             </div>
             {{/each}}
@@ -70,4 +70,4 @@
 </div>
         
 
-<script src="/js/dash.js"></script>
+<script src="/js/deleteReview.js"></script>

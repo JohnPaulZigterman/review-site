@@ -1,31 +1,32 @@
-$(".SongReviewDelete").on("click", function(event) {
+$(".SongReviewDelete").on("click", async function(event) {
     event.preventDefault();
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
-        const response = fetch('/api/albumReview/' + id, {
+        const response = await fetch('/api/songreviews/' + id, {
             method: 'DELETE',
         });
         
         if (response.ok) {
-            $(location).attr('href', '/deleteReview');
+            $(location).attr('href', '/dash');
         } else {
             alert(response.statusText);
         }
     }
 });
 
-$(".AlbumReviewDelete").on("click", function(event) {
+$(".AlbumReviewDelete").on("click", async function(event) {
     event.preventDefault();
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
-        const response = fetch('/api/albumReview/' + id, {
+        console.log(id);
+        const response = await fetch('/api/albumreviews/' + id, {
             method: 'DELETE',
         });
         
         if (response.ok) {
-            $(location).attr('href', '/deleteReview');
+            $(location).attr('href', '/dash');
         } else {
-            alert(response.statusText);
+            console.log(response.statusText);
         }
     }
 });
