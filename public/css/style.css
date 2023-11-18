@@ -23,3 +23,7 @@ nav {
 .card-body {
     background-color:antiquewhite;
 }
+
+.card-footer {
+    background-color: lightblue;
+}

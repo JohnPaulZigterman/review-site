@@ -1,14 +1,22 @@
+<div>
+    <a href="/addReview">Add New Review</a>
+</div>
+<h5>Album Reviews</h5>
 {{#if sendUserData.albumreviews.length}}
 {{#each sendUserData.albumreviews as |albumreview| }}
 <div class="card">
-<section class="card-header">
-<h5>{{album.name}}</h5>
-<i>{{album.artist.name}}</i>
-</section>
-<section class="card-body">
-<h3>{{title}}</h3>
-<p>{{review}}</p>
-</section>
+    <section class="card-header">
+        <h5>{{album.name}}</h5>
+        <i>{{album.artist.name}}</i>
+    </section>
+    <section class="card-body">
+        <h3>{{title}}</h3>
+        <p>{{review}}</p>
+    </section>
+    <section class="card-footer">
+        <button type="button" class="btn btn-primary btn-sm" id="edit-{{albumreview.id}}">Edit Review</button>
+        <button type="button" class="btn btn-danger btn-sm" id="delete-{{albumreview.id}}">Delete Review</button>
+    </section>
 </div>
 {{/each}}
 {{/if}}

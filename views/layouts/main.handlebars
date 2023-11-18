@@ -17,12 +17,10 @@
             <a href="/">Home</a>
              
             {{#if loggedIn}}
-             <button type="button" class="btn btn-light" id="logout">logout</button>
-             <a href="/views/addReview.handlebars">Add</a>
-             <a href="/views/UpdateReview.handlebars">Update</a>
-             <a href="/views/DeleteReview.handlebars">Delete</a>
+            <a href="/dash">Dashboard</a>
+            <button type="button" class="btn btn-light" id="logout">Log Out</button>
             {{else}}
-            <a href="/login">login</a>
+            <a href="/login">Log In</a>
             {{/if}}
         </nav>
     </header>
