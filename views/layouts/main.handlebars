@@ -14,13 +14,19 @@
         <h1 >Album Review Zone</h1>
         <i>You Can Also Review Songs</i>
          <nav>
-            <a href="/">Home</a>
+            <a href="/">
+                <button type="button" class="btn btn-success" id="home">Home</button>
+            </a>
              
             {{#if loggedIn}}
-            <a href="/dash">Dashboard</a>
-            <button type="button" class="btn btn-light" id="logout">Log Out</button>
+            <a href="/dash">
+                <button type="button" class="btn btn-primary" id="home">Dash</button>
+            </a>
+            <button type="button" class="btn btn-danger" id="logout">Log Out</button>
             {{else}}
-            <a href="/login">Log In</a>
+            <a href="/login">
+                <button type="button" class="btn btn-info" id="home">Log In</button>
+            </a>
             {{/if}}
         </nav>
     </header>

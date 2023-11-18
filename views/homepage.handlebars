@@ -1,29 +1,31 @@
-{{#if users.length}}
-{{#each users as |user| }}
-<div class="card">
-<section class="card-header">
-    <h5>{{user.name}}</h5>
-</section>
-<section id="user-container" class="card-body">
-    <div>
-    <h3>Album Reviews</h3>
-    {{#each user.albumreviews as |albumrev|}}
-        <b>{{albumrev.title}}:</b>
-        <i>{{albumrev.album.name}} by {{albumrev.album.artist.name}}</i>
-        <br>
-    {{/each}}
+<div class="d-flex">
+    {{#if users.length}}
+    {{#each users as |user| }}
+    <div class="card p-2">
+        <section class="card-header">
+            <h5>{{user.name}}</h5>
+        </section>
+        <section id="user-container" class="card-body home-card-body">
+            <div>
+            <h5>Album Reviews</h5>
+            {{#each user.albumreviews as |albumrev|}}
+                <b>{{albumrev.title}}:</b>
+                <i>{{albumrev.album.name}} by {{albumrev.album.artist.name}}</i>
+                <br>
+            {{/each}}
+            </div>
+            <div>
+            <h5>Song Reviews</h5>
+            {{#each user.songreviews as |songrev|}}
+                <b>{{songrev.title}}:</b>
+                <i>"{{songrev.song.name}}" by {{songrev.song.album.artist.name}}</i>
+                <br>
+            {{/each}}
+            </div>
+        </section>
     </div>
-    <div>
-    <h3>Song Reviews</h3>
-    {{#each user.songreviews as |songrev|}}
-        <b>{{songrev.title}}:</b>
-        <i>"{{songrev.song.name}}" from {{songrev.song.album.name}} by {{songrev.song.album.artist.name}}</i>
-        <br>
     {{/each}}
-    </div>
-</section>
+    {{/if}}
 </div>
-{{/each}}
-{{/if}}
 <script src="/js/home.js"></script>
 
