@@ -1,0 +1,15 @@
+{{#if sendUserData.albumreviews.length}}
+{{#each sendUserData.albumreviews as |albumreview| }}
+<div class="card">
+<section class="card-header">
+<h5>{{album.name}}</h5>
+<i>{{album.artist.name}}</i>
+</section>
+<section class="card-body">
+<h3>{{title}}</h3>
+<p>{{review}}</p>
+</section>
+</div>
+{{/each}}
+{{/if}}
+<script src="/js/dash.js"></script>

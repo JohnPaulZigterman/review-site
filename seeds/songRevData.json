@@ -10,5 +10,17 @@
         "review": "I do NOT have robot ears.",
         "song_id": 1,
         "user_id": 2
+    },
+    {
+        "title": "GREAT",
+        "review": "Perfect for my robot ears.",
+        "song_id": 2,
+        "user_id": 1
+    },
+    {
+        "title": "Typical excellence",
+        "review": "I'm the king of listening to good songs.",
+        "song_id": 3,
+        "user_id": 1
     }
 ]

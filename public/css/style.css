@@ -1,0 +1,25 @@
+body{ 
+    background-color:lightyellow;
+}
+
+header {
+    margin: 5px;
+    padding: 5px;
+}
+
+nav {
+    margin: 6px;
+    padding: 6px;
+}
+
+.card {
+    border: 2px solid black;
+    margin: 4px;
+}
+
+.card-header {
+    background-color:lightsalmon;
+}
+.card-body {
+    background-color:antiquewhite;
+}

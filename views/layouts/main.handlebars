@@ -11,13 +11,13 @@
 
 <body>
     <header>
-        <h1 >Review Site</h1>
+        <h1 >Album Review Zone</h1>
+        <i>You Can Also Review Songs</i>
          <nav>
-            <a href="/">home</a>
-            <a href="/views/albumSongReview.handlebars">Albums/Song</a>
-             <button type="button" class="btn btn-light" id="logout">logout</button>
+            <a href="/">Home</a>
+             
             {{#if loggedIn}}
-            
+             <button type="button" class="btn btn-light" id="logout">logout</button>
              <a href="/views/addReview.handlebars">Add</a>
              <a href="/views/UpdateReview.handlebars">Update</a>
              <a href="/views/DeleteReview.handlebars">Delete</a>

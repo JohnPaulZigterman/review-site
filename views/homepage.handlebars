@@ -1,14 +1,19 @@
 {{#if users.length}}
 {{#each users as |user| }}
 <div class="card">
-<button id="user-btn" href="/users/{{user.id}}">{{user.name}}</button>
-<section id="user-container">
-{{#each user.albumreviews as |albumrev|}}
-<h5>{{albumrev.title}}</h5>
-{{/each}}
+<section class="card-header">
+    <h5>{{user.name}}</h5>
 </section>
-{{/each}}
+<section id="user-container" class="card-body">
+    <h3>Album Reviews</h3>
+    {{#each user.albumreviews as |albumrev|}}
+        <b>{{albumrev.title}}:</b>
+        <i>"{{albumrev.album.name}}" - {{albumrev.album.artist.name}}</i>
+        <br>
+    {{/each}}
+</section>
 </div>
+{{/each}}
 {{/if}}
 <script src="/js/home.js"></script>
 
