@@ -1,19 +1,19 @@
 $('#songReviewForm').submit(async function(event) {
     event.preventDefault();
 
-    const song_id = $('#songTitle').val().trim();
+    const song_id = $('#songName').val().trim();
     const title = $('#songReviewTitle').val().trim();
     const review = $('#songReview').val().trim();
     
-    if (songTitle && title && review) { 
-        const response = await fetch('/api/song', {
+    if (song_id && title && review) { 
+        const response = await fetch('/api/songreviews', {
             method: 'POST',
             body: JSON.stringify({ song_id, title, review }),
             headers: { 'Content-Type': 'application/json' },
         });
         
         if (response.ok) {
-            $(location).attr('href', '/addReview');
+            $(location).attr('href', '/dash');
         } else {
             alert(response.statusText);
         }
@@ -23,19 +23,19 @@ $('#songReviewForm').submit(async function(event) {
 $('#albumReviewForm').submit(async function(event) {
     event.preventDefault();
 
-    const album_id = $('#albumTitle').val().trim();
+    const album_id = $('#albumName').val().trim();
     const title = $('#albumReviewTitle').val().trim();
     const review = $('#albumReview').val().trim();
     
-    if (albumTitle && title && review) { 
-        const response = await fetch('/api/album', {
+    if (album_id && title && review) { 
+        const response = await fetch('/api/albumreviews', {
             method: 'POST',
             body: JSON.stringify({ album_id, title, review }),
             headers: { 'Content-Type': 'application/json' },
         });
         
         if (response.ok) {
-            $(location).attr('href', '/addReview');
+            $(location).attr('href', '/dash');
         } else {
             alert(response.statusText);
         }
