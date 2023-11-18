@@ -14,7 +14,7 @@ async function loginFormHandler(e) {
         });
 
         if (res.ok) {
-            document.location.replace('/');
+            document.location.replace('/dash');
             alert('Log In Successful!')
         } else {
             alert(res.statusText);
