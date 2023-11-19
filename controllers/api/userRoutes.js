@@ -176,4 +176,23 @@ router.delete('/:id', (req, res) => {
     });
 });
 
+router.post('/sign-up', (req, res) => {
+    const { name, password, email } = req.body;
+
+    User.create({ name, password, email })
+        .then(userData => {
+            req.session.save(() => {
+                req.session.loggedIn = true;
+                req.session.user_id = userData.id;
+                req.session.name = userData.name;
+                req.session.id = userData.id;
+                res.json(userData);
+            });
+        })
+        .catch(err => {
+            console.error(err);
+            res.status(500).json(err);
+        });
+});
+
 module.exports = router;
