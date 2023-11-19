@@ -44,7 +44,7 @@ router.get('/', (req, res) => {
     })
     .then(userData => {
         const users = userData.map(user => user.get({ plain: true }));
-        res.render('homepage', { users });
+        res.render('homepage', { users, loggedIn: req.session.loggedIn });
 //FOR TESTING        //res.status(200).json(userData);
     })
     .catch(err => {

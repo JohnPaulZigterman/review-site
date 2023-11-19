@@ -36,9 +36,14 @@ router.get('/', withAuth, (req, res) => {
             res.status(404).json({ message: 'No User With That ID!' });
             return;
         }
-        const user = userData.map(user => user.get({ plain: true }));
-        res.render('dash', { user });
+        var sendUserData = JSON.parse(JSON.stringify(userData));
+        //res.status(200).json(userData);
+        res.render('dash', { sendUserData, loggedIn: req.session.loggedIn });
     })
-})
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+});
 
 module.exports = router;

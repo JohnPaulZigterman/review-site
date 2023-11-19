@@ -1,0 +1,46 @@
+body{ 
+    background-color:lightyellow;
+}
+
+header {
+    margin: 5px;
+    padding: 5px;
+}
+
+nav {
+    margin: 6px;
+    padding: 6px;
+}
+
+.card {
+    border: 2px solid black;
+    margin: 4px;
+    background-color: lightcyan;
+    box-shadow: 3px 3px 3px;
+}
+
+.card-header {
+    background-color:lightsalmon;
+}
+.card-body {
+    background-color:antiquewhite;
+}
+
+.card-footer {
+    background-color: lightblue;
+}
+
+.home-card-body {
+    font-size: 75%;
+}
+
+.group-header {
+    background-color: lightsteelblue;
+    border: 2px solid black;
+}
+
+.group-body {
+    background-color: lightgray;
+    border: 2px solid black;
+    border-top: 0px;
+}
