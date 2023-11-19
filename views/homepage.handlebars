@@ -2,10 +2,10 @@
     {{#if users.length}}
     {{#each users as |user| }}
     <div class="card p-2">
-        <section class="card-header">
-            <h5>{{user.name}}</h5>
+        <section class="card-header user-card" data-id="{{user.id}}">
+            <h5 class="user-card" data-id="{{user.id}}">{{user.name}}</h5>
         </section>
-        <section id="user-container" class="card-body home-card-body">
+        <section class="card-body home-card-body">
             <div>
             <h5>Album Reviews</h5>
             {{#each user.albumreviews as |albumrev|}}
