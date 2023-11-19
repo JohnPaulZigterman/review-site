@@ -1,8 +1,22 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { User, SongReview, AlbumReview, Song, Album, Artist } = require('../models');
+const albumArt = require('album-art');
 
 router.get('/:id', (req, res) => {
+
+    async function getArt(sendSongRevData) {
+        albumArt(sendSongRevData.song.album.artist.name, { album: sendSongRevData.song.album.name, size: "medium" })
+        .then(albumArtLink => {
+            console.log(albumArtLink);
+            res.render('view-song-review', { sendSongRevData, albumArtLink, loggedIn: req.session.loggedIn });
+        })
+        .catch(err => {
+            console.log(err);
+            return;
+        })
+    };
+
     SongReview.findOne({
         where: { id: req.params.id },
         include: [
@@ -35,7 +49,8 @@ router.get('/:id', (req, res) => {
         }
         var sendSongRevData = JSON.parse(JSON.stringify(songRevData));
         //res.status(200).json(userData);
-        res.render('view-song-review', { sendSongRevData, loggedIn: req.session.loggedIn });
+        getArt(sendSongRevData);
+
     })
     .catch(err => {
         console.log(err);
