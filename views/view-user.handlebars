@@ -1,5 +1,5 @@
 <div class="d-flex">
-    <div class="card p-2">
+    <div class="card p-1">
         <div class="card-header">
             <h1>{{sendUserData.name}}'s Profile</h1>
         </div>
@@ -16,7 +16,7 @@
             {{#each sendUserData.albumreviews as |albumreview| }}
             <div class="card p-1 col-2">
                 <section class="card-header album-rev-card" data-id="{{id}}">
-                    <h5 class="album-rev-card" data-id="{{id}}">{{album.name}}</h5>
+                    <button class="album-rev-card btn btn-lg btn-outline-dark border-box" data-id="{{id}}">{{album.name}}</button>
                     <i class="album-rev-card" data-id="{{id}}">{{album.artist.name}}</i>
                 </section>
                 <section class="card-body">
@@ -41,7 +41,7 @@
             {{#each sendUserData.songreviews as |songreview| }}
             <div class="card p-1 col-2">
                 <section class="card-header song-rev-card" data-id="{{id}}">
-                    <h5 class="song-rev-card" data-id="{{id}}">{{song.name}}</h5>
+                    <button class="song-rev-card btn btn-lg btn-outline-dark border-box" data-id="{{id}}">{{song.name}}</button>
                     <i class="song-rev-card" data-id="{{id}}">{{song.album.artist.name}}</i>
                 </section>
                 <section class="card-body">
