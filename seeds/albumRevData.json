@@ -9,7 +9,7 @@
         "title": "Terrible Album",
         "review": "It's just beeps and boops and loud drums.",
         "album_id": 2,
-        "user_id": 2
+        "user_id": 1
     },
     {
         "title": "Best Album",
@@ -22,5 +22,53 @@
         "review": "SUPER GOOD REALLY",
         "album_id": 3,
         "user_id": 1
+    },
+    {
+        "title": "Seminal Album",
+        "review": "Squarepusher has done it again, he is an undeniable genius.",
+        "album_id": 2,
+        "user_id": 2
+    },
+    {
+        "title": "Terrible Album",
+        "review": "It's just beeps and boops and loud drums.",
+        "album_id": 2,
+        "user_id": 2
+    },
+    {
+        "title": "Best Album",
+        "review": "It's just beeps and boops and loud drums! AWESOME",
+        "album_id": 1,
+        "user_id": 2
+    },
+    {
+        "title": "ALSO GREAT",
+        "review": "SUPER GOOD REALLY",
+        "album_id": 3,
+        "user_id": 2
+    },
+    {
+        "title": "Seminal Album",
+        "review": "Squarepusher has done it again, he is an undeniable genius.",
+        "album_id": 2,
+        "user_id": 3
+    },
+    {
+        "title": "Terrible Album",
+        "review": "It's just beeps and boops and loud drums.",
+        "album_id": 2,
+        "user_id": 3
+    },
+    {
+        "title": "Best Album",
+        "review": "It's just beeps and boops and loud drums! AWESOME",
+        "album_id": 1,
+        "user_id": 3
+    },
+    {
+        "title": "ALSO GREAT",
+        "review": "SUPER GOOD REALLY",
+        "album_id": 3,
+        "user_id": 3
     }
 ]
