@@ -3,21 +3,20 @@
     {{#each users as |user| }}
     <div class="card p-1 col-2">
         <section class="card-header user-card" data-id="{{user.id}}">
-            <h5 class="user-card" data-id="{{user.id}}">{{user.name}}</h5>
+            <button class="user-card btn btn-lg btn-outline-dark border-box" data-id="{{user.id}}">{{user.name}}</button>
         </section>
         <section class="card-body home-card-body">
             <div>
             <h5 class="border-box">Album Reviews</h5>
             {{#each user.albumreviews as |albumrev|}}
-                <i>"{{albumrev.album.name}}" by <b>{{albumrev.album.artist.name}}</b></i>
+                <i>"<u><a href="/albumreview/{{albumrev.id}}">{{albumrev.album.name}}</a></u>" by <b>{{albumrev.album.artist.name}}</b></i>
                 <br>
             {{/each}}
             </div>
             <div>
             <h5 class="border-box">Song Reviews</h5>
             {{#each user.songreviews as |songrev|}}
-                <b>{{songrev.title}}:</b>
-                <i>"{{songrev.song.name}}" by {{songrev.song.album.artist.name}}</i>
+                <i>"<u><a href="/songreview/{{songrev.id}}">{{songrev.song.name}}</a></u>" by <b>{{songrev.song.album.artist.name}}</b></i>
                 <br>
             {{/each}}
             </div>
