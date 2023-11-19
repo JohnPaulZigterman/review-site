@@ -1,0 +1,73 @@
+<div class="d-flex">
+    <div class="card p-2">
+        <div class="card-header">
+            <h1>{{sendUserData.name}}'s Dashboard</h1>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex">
+    <div class="card p-2">
+        <div class="card-header group-header">
+            <h1>Album Reviews</h1>
+                <a href="/add-album-rev">
+            <button type="button" class="btn btn-success btn-sm" id="new-albumreview-btn">Add New Review</button>
+            </a>
+        </div>
+        <div class="d-flex card-body group-body">
+            {{#if sendUserData.albumreviews.length}}
+            {{#each sendUserData.albumreviews as |albumreview| }}
+            <div class="card p-2">
+                <section class="card-header">
+                    <h5>{{album.name}}</h5>
+                    <i>{{album.artist.name}}</i>
+                </section>
+                <section class="card-body">
+                    <h5>{{title}}</h5>
+                    <p>{{review}}</p>
+                </section>
+                <section class="card-footer">
+                    <button type="button" class="btn btn-primary btn-sm AlbumReviewUpdate" data-id="{{albumreview.id}}">Edit Review</button>
+                    <button type="button" class="btn btn-danger btn-sm AlbumReviewDelete" data-id="{{albumreview.id}}">Delete Review</button>
+                </section>
+            </div>
+            {{/each}}
+            {{/if}}
+        </div>
+    </div>
+</div>
+
+
+<div class="d-flex">
+    <div class="card p-2">
+        <div class="card-header group-header">
+            <h1>Song Reviews</h1>
+            <a href="/add-song-rev">
+                <button type="button" class="btn btn-success btn-sm" id="new-songreview-btn">Add New Review</button>
+            </a>
+        </div>
+        <div class="d-flex card-body group-body">
+            {{#if sendUserData.songreviews.length}}
+            {{#each sendUserData.songreviews as |songreview| }}
+            <div class="card p-2">
+                <section class="card-header">
+                    <h5>{{song.name}}</h5>
+                    <i>{{song.album.artist.name}}</i>
+                </section>
+                <section class="card-body">
+                    <h5>{{title}}</h5>
+                    <p>{{review}}</p>
+                </section>
+                <section class="card-footer">
+                    <button type="button" class="btn btn-primary btn-sm SongReviewUpdate" data-id="{{songreview.id}}">Edit Review</button>
+                    <button type="button" class="btn btn-danger btn-sm SongReviewDelete" data-id="{{songreview.id}}">Delete Review</button>
+                </section>
+            </div>
+            {{/each}}
+            {{/if}}
+        </div>
+    </div>
+</div>
+        
+
+<script src="/js/deleteReview.js"></script>
