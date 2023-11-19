@@ -1,0 +1,23 @@
+<div class="d-flex">
+    <div class="card p-2">
+        <div class="card-header group-header">
+            <h1>Song Review</h1>
+            <h5>{{sendSongRevData.song.name}}</h5>
+            <p>by {{sendSongRevData.song.album.artist.name}}</p>
+        </div>
+        <div class="d-flex card-body group-body">
+            <div class="card p-2">
+                <section class="card-header">
+                    <h5>{{sendSongRevData.title}}</h5>
+                    <i>by {{sendSongRevData.user.name}}</i>
+                </section>
+                <section class="card-body">
+                    <i>{{sendSongRevData.review}}</i>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+        
+
+<script src="/js/deleteReview.js"></script>
