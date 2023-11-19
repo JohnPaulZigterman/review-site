@@ -1,0 +1,31 @@
+<div class="d-flex">
+    <div class="card">
+        <h2 class="card-header">Edit Your Album Review</h2>
+        <form class="card-body" id="albumReviewForm">
+            <div class="form-row">
+                <label for="albumName" class="form-label">Album Name</label>
+                <select id="albumName" name="albumName" class="form-input">
+                    {{#if albums.length}}
+                    {{#each albums as |album|}}
+                    <option value="{{album.id}}">{{album.name}} by {{album.artist.name}}</option>
+                    {{/each}}
+                    {{/if}}
+                    <option selected="selected" value="{{albumRev.album.id}}">{{albumRev.album.name}} by {{albumRev.album.artist.name}}</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="albumReviewTitle" class="form-label">Review Title</label>
+                <input type="text" id="albumReviewTitle" name="albumReviewTitle" class="form-input" value="{{albumRev.title}}" />
+            </div>
+            <div class="form-row">
+                <label for="albumReview" class="form-label">Review</label>
+                <input type="text" id="albumReview" name="albumReview" class="form-input" value="{{albumRev.review}}" />
+            </div>
+            <div class="form-row">
+                <button type="submit" class="btn btn-primary" id="update-album-rev-button" data-id="{{albumRev.id}}">Update Review</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="/js/updateReview.js"></script>

@@ -8,6 +8,8 @@ const addSongRevRoutes = require('./addSongRevRoutes');
 const viewUserRoutes = require('./viewUserRoutes');
 const viewSongRevRoutes = require('./viewSongRevRoutes');
 const viewAlbumRevRoutes = require('./viewAlbumRevRoutes');
+const editSongRevRoutes = require('./editSongRevRoutes');
+const editAlbumRevRoutes = require('./editAlbumRevRoutes');
 
 router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
@@ -17,6 +19,8 @@ router.use('/add-song-rev', addSongRevRoutes);
 router.use('/user', viewUserRoutes);
 router.use('/songreview', viewSongRevRoutes);
 router.use('/albumreview', viewAlbumRevRoutes);
+router.use('/edit-song-rev', editSongRevRoutes);
+router.use('/edit-album-rev', editAlbumRevRoutes);
 
 router.use((req, res) => res.status(404).end());
 

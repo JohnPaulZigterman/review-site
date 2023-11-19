@@ -87,7 +87,10 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 router.put('/:id', withAuth, (req, res) => {
-    SongReview.update(req.body, {
+    SongReview.update({
+        ...req.body,
+        user_id: req.session.user_id,
+    },{
         where: {
             id: req.params.id,
             user_id: req.session.user_id
