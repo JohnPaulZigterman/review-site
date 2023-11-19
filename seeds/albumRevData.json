@@ -24,51 +24,75 @@
         "user_id": 1
     },
     {
-        "title": "Seminal Album",
-        "review": "Squarepusher has done it again, he is an undeniable genius.",
-        "album_id": 2,
-        "user_id": 2
-    },
-    {
-        "title": "Terrible Album",
-        "review": "It's just beeps and boops and loud drums.",
-        "album_id": 2,
-        "user_id": 2
-    },
-    {
-        "title": "Best Album",
-        "review": "It's just beeps and boops and loud drums! AWESOME",
+        "title": "Mind-Blowing Masterpiece",
+        "review": "Aphex Twin's Melodies From Mars is a mind-blowing masterpiece. Each track takes you on a journey through electronic landscapes that are both intricate and beautiful. Highly recommended!",
         "album_id": 1,
+        "user_id": 5
+    },
+    {
+        "title": "Innovative and Experimental",
+        "review": "Feed Me Weird Things by Squarepusher is an innovative and experimental album that pushes the boundaries of electronic music. The intricate rhythms and unique soundscapes make it a must-listen for fans of the genre.",
+        "album_id": 2,
+        "user_id": 6
+    },
+    {
+        "title": "Feel Infinite Vibes",
+        "review": "Jacques Greene's Feel Infinite is a sonic journey that captures a spectrum of emotions. The beats are infectious, and the overall vibe is simply mesmerizing. A modern classic!",
+        "album_id": 3,
+        "user_id": 7
+    },
+    {
+        "title": "Classic Hip-Hop",
+        "review": "Nas' Illmatic is a classic hip-hop album that defined an era. The lyrical prowess and storytelling on this record are unparalleled. A must-have for any hip-hop enthusiast.",
+        "album_id": 4,
+        "user_id": 7
+    },
+    {
+        "title": "Timeless Hip-Hop",
+        "review": "Common's Be is a timeless hip-hop gem. The production, lyricism, and overall vibe make it a standout in the genre. A true masterpiece!",
+        "album_id": 5,
+        "user_id": 3
+    },
+    {
+        "title": "Southern Hip-Hop Excellence",
+        "review": "Outkast's ATLiens is a testament to Southern hip-hop excellence. The duo's creativity and unique style shine through, making this album a classic that stands the test of time.",
+        "album_id": 6,
+        "user_id": 4
+    },
+    {
+        "title": "Electronic Bliss",
+        "review": "Migration by Bonobo is a journey into electronic bliss. The seamless blend of ambient and rhythmic elements creates a captivating listening experience. Highly recommended!",
+        "album_id": 7,
+        "user_id": 1
+    },
+    {
+        "title": "Nostalgic Sounds",
+        "review": "Music Has the Right to Children by Boards of Canada is a nostalgic trip through electronic sounds. The intricate production and nostalgic melodies make it a must-listen for electronic music enthusiasts.",
+        "album_id": 8,
         "user_id": 2
     },
     {
-        "title": "ALSO GREAT",
-        "review": "SUPER GOOD REALLY",
-        "album_id": 3,
-        "user_id": 2
-    },
-    {
-        "title": "Seminal Album",
-        "review": "Squarepusher has done it again, he is an undeniable genius.",
-        "album_id": 2,
+        "title": "IDM Masterpiece",
+        "review": "Tri Repetae by Autechre is an IDM masterpiece. The complex rhythms and experimental nature of the tracks showcase the duo's pioneering approach to electronic music.",
+        "album_id": 9,
         "user_id": 3
     },
     {
-        "title": "Terrible Album",
-        "review": "It's just beeps and boops and loud drums.",
-        "album_id": 2,
-        "user_id": 3
+        "title": "Poetic Excellence",
+        "review": "To Pimp a Butterfly by Kendrick Lamar is a poetic masterpiece. The album's exploration of societal issues and Lamar's lyrical prowess make it a landmark in modern hip-hop.",
+        "album_id": 10,
+        "user_id": 4
     },
     {
-        "title": "Best Album",
-        "review": "It's just beeps and boops and loud drums! AWESOME",
-        "album_id": 1,
-        "user_id": 3
+        "title": "Beat Maestro",
+        "review": "Donuts by J Dilla is a testament to the beat maestro's genius. The instrumental hip-hop tracks showcase Dilla's unparalleled skill in crafting soulful and engaging beats.",
+        "album_id": 11,
+        "user_id": 5
     },
     {
-        "title": "ALSO GREAT",
-        "review": "SUPER GOOD REALLY",
-        "album_id": 3,
-        "user_id": 3
+        "title": "Futuristic Soundscape",
+        "review": "Cosmogramma by Flying Lotus is a futuristic soundscape that pushes the boundaries of electronic music. The experimental beats and unique production make it a standout in the genre.",
+        "album_id": 12,
+        "user_id": 6
     }
 ]

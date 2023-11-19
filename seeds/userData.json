@@ -13,5 +13,30 @@
       "name": "Anthony",
       "email": "anthony@dj.com",
       "password": "house4ever!"
+    },
+    {
+      "name": "Emily",
+      "email": "emily@example.com",
+      "password": "SecurePass789!@#"
+    },
+    {
+      "name": "Alex",
+      "email": "alex@webmail.com",
+      "password": "StrongPwd567$%^"
+    },
+    {
+      "name": "Linda",
+      "email": "linda@techworld.net",
+      "password": "InnoTech2023!"
+    },
+    {
+      "name": "Michael",
+      "email": "michael@codinghub.org",
+      "password": "CodeMaster123$"
+    },
+    {
+      "name": "Sophie",
+      "email": "sophie@datageek.com",
+      "password": "Data123Geek!"
     }
   ]
