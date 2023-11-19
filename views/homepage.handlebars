@@ -1,21 +1,20 @@
-<div class="d-flex">
+<div class="d-flex flex-wrap justify-content-center">
     {{#if users.length}}
     {{#each users as |user| }}
-    <div class="card p-2">
+    <div class="card p-1 col-2">
         <section class="card-header user-card" data-id="{{user.id}}">
             <h5 class="user-card" data-id="{{user.id}}">{{user.name}}</h5>
         </section>
         <section class="card-body home-card-body">
             <div>
-            <h5>Album Reviews</h5>
+            <h5 class="border-box">Album Reviews</h5>
             {{#each user.albumreviews as |albumrev|}}
-                <b>{{albumrev.title}}:</b>
-                <i>{{albumrev.album.name}} by {{albumrev.album.artist.name}}</i>
+                <i>"{{albumrev.album.name}}" by <b>{{albumrev.album.artist.name}}</b></i>
                 <br>
             {{/each}}
             </div>
             <div>
-            <h5>Song Reviews</h5>
+            <h5 class="border-box">Song Reviews</h5>
             {{#each user.songreviews as |songrev|}}
                 <b>{{songrev.title}}:</b>
                 <i>"{{songrev.song.name}}" by {{songrev.song.album.artist.name}}</i>
