@@ -1,0 +1,60 @@
+<div class="d-flex">
+    <div class="card p-2">
+        <div class="card-header">
+            <h1>{{sendUserData.name}}'s Profile</h1>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex">
+    <div class="card p-2">
+        <div class="card-header group-header">
+            <h1>Album Reviews</h1>
+        </div>
+        <div class="d-flex card-body group-body">
+            {{#if sendUserData.albumreviews.length}}
+            {{#each sendUserData.albumreviews as |albumreview| }}
+            <div class="card p-2">
+                <section class="card-header album-rev-card" data-id="{{id}}">
+                    <h5 class="album-rev-card" data-id="{{id}}">{{album.name}}</h5>
+                    <i class="album-rev-card" data-id="{{id}}">{{album.artist.name}}</i>
+                </section>
+                <section class="card-body">
+                    <h5>{{title}}</h5>
+                    <p>{{review}}</p>
+                </section>
+            </div>
+            {{/each}}
+            {{/if}}
+        </div>
+    </div>
+</div>
+
+
+<div class="d-flex">
+    <div class="card p-2">
+        <div class="card-header group-header">
+            <h1>Song Reviews</h1>
+        </div>
+        <div class="d-flex card-body group-body">
+            {{#if sendUserData.songreviews.length}}
+            {{#each sendUserData.songreviews as |songreview| }}
+            <div class="card p-2">
+                <section class="card-header song-rev-card" data-id="{{id}}">
+                    <h5 class="song-rev-card" data-id="{{id}}">{{song.name}}</h5>
+                    <i class="song-rev-card" data-id="{{id}}">{{song.album.artist.name}}</i>
+                </section>
+                <section class="card-body">
+                    <h5>{{title}}</h5>
+                    <p>{{review}}</p>
+                </section>
+            </div>
+            {{/each}}
+            {{/if}}
+        </div>
+    </div>
+</div>
+        
+
+<script src="/js/deleteReview.js"></script>
+<script src="/js/viewUser.js"></script>

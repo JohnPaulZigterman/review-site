@@ -4,32 +4,60 @@
         "name": "Fingerbib",
         "album_id": 1,
         "artist_id": 1
-      
-    },
-    {
+      },
+      {
         "name": "Squarepusher Theme",
         "album_id": 2,
         "artist_id": 2
-       
-    },
-    {
+      },
+      {
         "name": "Afterglow",
         "album_id": 3,
         "artist_id": 3
-    },
-    {
+      },
+      {
         "name": "Represent",
         "album_id": 4,
         "artist_id": 4
-    },
-    {
-        "name": "The Corner7",
+      },
+      {
+        "name": "The Corner",
         "album_id": 5,
         "artist_id": 5
-    },
-    {
+      },
+      {
         "name": "Two Dope Boyz (In a Cadillac)",
         "album_id": 6,
         "artist_id": 6
-    }
+      },
+      {
+        "name": "Bambro Koyo Ganda",
+        "album_id": 7,
+        "artist_id": 7
+      },
+      {
+        "name": "Roygbiv",
+        "album_id": 8,
+        "artist_id": 8
+      },
+      {
+        "name": "Clipper",
+        "album_id": 9,
+        "artist_id": 9
+      },
+      {
+        "name": "King Kunta",
+        "album_id": 10,
+        "artist_id": 10
+      },
+      {
+        "name": "Time: The Donut of the Heart",
+        "album_id": 11,
+        "artist_id": 11
+      },
+      {
+        "name": "Cosmogramma",
+        "album_id": 12,
+        "artist_id": 12
+      }
 ]

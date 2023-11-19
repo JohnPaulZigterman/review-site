@@ -24,51 +24,75 @@
         "user_id": 1
     },
     {
-        "title": "Fabulous Song!!",
-        "review": "I just love electronic music in general.",
-        "song_id": 1,
-        "user_id": 2
+      "title": "Mesmerizing Beats",
+      "review": "Fingerbib by Aphex Twin has mesmerizing beats that take you on a journey. The intricate layers and electronic sounds create a unique listening experience. Highly recommended!",
+      "song_id": 1,
+      "user_id": 5
     },
     {
-        "title": "AWFUL!!",
-        "review": "I do NOT have robot ears.",
-        "song_id": 1,
-        "user_id": 2
-    },
-    {
-        "title": "GREAT",
-        "review": "Perfect for my robot ears.",
+        "title": "Nostalgic Vibes",
+        "review": "Squarepusher Theme by Squarepusher brings back nostalgic vibes from the drill 'n' bass era. The frenetic pace and intricate rhythms make it a standout in the electronic music scene.",
         "song_id": 2,
+        "user_id": 6
+    },
+    {
+        "title": "Sonic Euphoria",
+        "review": "Afterglow by Jacques Greene is sonic euphoria. The infectious beats and emotive melodies create a captivating atmosphere. A must-listen for electronic music enthusiasts.",
+        "song_id": 3,
+        "user_id": 7
+    },
+    {
+        "title": "Representing Realness",
+        "review": "Represent by Nas is a track representing realness in every sense. Nas' lyrical delivery and storytelling prowess shine through, making it a classic in hip-hop history.",
+        "song_id": 4,
+        "user_id": 8
+    },
+    {
+        "title": "The Corner",
+        "review": "The Corner by Common is a masterful blend of smooth beats and insightful lyrics. Common's poetic delivery and the jazzy production make it a timeless hip-hop gem.",
+        "song_id": 5,
+        "user_id": 4
+    },
+    {
+        "title": "Southern Hip-Hop Vibes",
+        "review": "Two Dope Boyz (In a Cadillac) by Outkast captures the essence of Southern hip-hop vibes. The unique flow and infectious energy make it a standout track in the genre.",
+        "song_id": 6,
+        "user_id": 3
+    },
+    {
+        "title": "Enchanting Melodies",
+        "review": "Bambro Koyo Ganda by Bonobo features enchanting melodies and a mesmerizing blend of electronic and world music elements. A track that takes you on a musical journey.",
+        "song_id": 7,
+        "user_id": 1
+    },
+    {
+        "title": "Roygbiv Magic",
+        "review": "Roygbiv by Boards of Canada works like magic on the ears. The nostalgic tones and dreamy atmosphere create a truly captivating listening experience.",
+        "song_id": 8,
         "user_id": 2
     },
     {
-        "title": "Typical excellence",
-        "review": "I'm the king of listening to good songs.",
-        "song_id": 3,
-        "user_id": 2
-    },
-    {
-        "title": "Fabulous Song!!",
-        "review": "I just love electronic music in general.",
-        "song_id": 1,
+        "title": "Clipper's Brilliance",
+        "review": "Clipper by Autechre showcases brilliance in IDM. The intricate rhythms and experimental soundscapes make it a standout track for electronic music enthusiasts.",
+        "song_id": 9,
         "user_id": 3
     },
     {
-        "title": "AWFUL!!",
-        "review": "I do NOT have robot ears.",
-        "song_id": 1,
-        "user_id": 3
+        "title": "King Kunta's Groove",
+        "review": "King Kunta by Kendrick Lamar is a groove masterpiece. The funky beats and Lamar's confident flow create an irresistible energy that keeps you moving.",
+        "song_id": 10,
+        "user_id": 4
     },
     {
-        "title": "GREAT",
-        "review": "Perfect for my robot ears.",
-        "song_id": 2,
-        "user_id": 3
+        "title": "Heartfelt Nostalgia",
+        "review": "Time: The Donut of the Heart by J Dilla evokes heartfelt nostalgia. The soulful beats and sampled melodies showcase Dilla's mastery in crafting emotionally resonant music.",
+        "song_id": 11,
+        "user_id": 5
     },
     {
-        "title": "Typical excellence",
-        "review": "I'm the king of listening to good songs.",
-        "song_id": 3,
-        "user_id": 3
+        "title": "Cosmic Exploration",
+        "review": "Cosmogramma by Flying Lotus is a cosmic exploration through sound. The experimental beats and genre-defying elements make it a track that transports you to another dimension.",
+        "song_id": 12,
+        "user_id": 6
     }
 ]

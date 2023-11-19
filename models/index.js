@@ -29,8 +29,7 @@ SongReview.belongsTo(Song, {
 });
 
 Song.hasMany(SongReview, {
-    foreignKey: 'song_id',
-    onDelete: 'cascade'
+    foreignKey: 'song_id'
 })
 
 AlbumReview.belongsTo(Album, {

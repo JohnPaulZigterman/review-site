@@ -5,42 +5,84 @@
         "genre": "Electronic",
         "label": "N/A",
         "artist_id": 1
-    },
-    {
+      },
+      {
         "name": "Feed Me Weird Things",
         "year": "1996",
         "genre": "Drill 'n' bass",
         "label": "Rephlex",
         "artist_id": 2
-    },
-    {
+      },
+      {
         "name": "Feel Infinite",
         "year": "2017",
         "genre": "Electronic",
         "label": "LuckyMe",
         "artist_id": 3
-    },
-    {
+      },
+      {
         "name": "Illmatic",
         "year": "1994",
         "genre": "Hip Hop",
         "label": "Columbia",
         "artist_id": 4
-    },
-    {
+      },
+      {
         "name": "Be",
         "year": "2005",
         "genre": "Hip Hop",
-        "label": "GOOD Music ",
+        "label": "GOOD Music",
         "artist_id": 5
-    },
-    {
+      },
+      {
         "name": "ATLiens",
         "year": "1996",
         "genre": "Hip Hop",
-        "label": "LAface, Arista",
+        "label": "LaFace, Arista",
         "artist_id": 6
-    }
+      },
+      {
+        "name": "Migration",
+        "year": "2017",
+        "genre": "Electronic",
+        "label": "Ninja Tune",
+        "artist_id": 7
+      },
+      {
+        "name": "Music Has the Right to Children",
+        "year": "1998",
+        "genre": "Electronic",
+        "label": "Warp",
+        "artist_id": 8
+      },
+      {
+        "name": "Tri Repetae",
+        "year": "1995",
+        "genre": "IDM",
+        "label": "Warp",
+        "artist_id": 9
+      },
+      {
+        "name": "To Pimp a Butterfly",
+        "year": "2015",
+        "genre": "Hip Hop",
+        "label": "Top Dawg, Aftermath, Interscope",
+        "artist_id": 10
+      },
+      {
+        "name": "Donuts",
+        "year": "2006",
+        "genre": "Hip Hop",
+        "label": "Stones Throw",
+        "artist_id": 11
+      },
+      {
+        "name": "Cosmogramma",
+        "year": "2010",
+        "genre": "Electronic",
+        "label": "Warp",
+        "artist_id": 12
+      }
 ]
 
 
