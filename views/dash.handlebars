@@ -27,7 +27,9 @@
                     <p>{{review}}</p>
                 </section>
                 <section class="card-footer">
+                    <a href='/edit-album-rev?id={{albumreview.id}}'>
                     <button type="button" class="btn btn-primary btn-sm AlbumReviewUpdate" data-id="{{albumreview.id}}">Edit Review</button>
+                    </a>
                     <button type="button" class="btn btn-danger btn-sm AlbumReviewDelete" data-id="{{albumreview.id}}">Delete Review</button>
                 </section>
             </div>
@@ -59,7 +61,9 @@
                     <p>{{review}}</p>
                 </section>
                 <section class="card-footer">
+                    <a href='/edit-song-rev?id={{songreview.id}}'>
                     <button type="button" class="btn btn-primary btn-sm SongReviewUpdate" data-id="{{songreview.id}}">Edit Review</button>
+                    </a>
                     <button type="button" class="btn btn-danger btn-sm SongReviewDelete" data-id="{{songreview.id}}">Delete Review</button>
                 </section>
             </div>
