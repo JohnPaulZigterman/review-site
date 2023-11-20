@@ -1,9 +1,43 @@
 const router = require('express').Router();
+var session = require('express-session');
 const { User, SongReview, AlbumReview, Song, Album, Artist } = require('../../models');
 
 router.get('/', (req, res) => {
     User.findAll({
-        attributes: { exclude: ['password'] }
+        attributes: { exclude: ['password'] },
+        include: [
+            {
+                model: AlbumReview,
+                include: [
+                    {
+                        model: Album,
+                        include: [
+                            {
+                                model: Artist
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                model: SongReview,
+                include: [
+                    {
+                        model: Song,
+                        include: [
+                            {
+                                model: Album,
+                                include: [
+                                    {
+                                        model: Artist
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     })
     .then(userData => res.json(userData))
     .catch(err => {
@@ -24,7 +58,6 @@ router.get('/:id', (req, res) => {
                 'id',
                 'title',
                 'review',
-                'created_at'
             ],
             include: {
                 model: Album,
@@ -41,7 +74,6 @@ router.get('/:id', (req, res) => {
                 'id',
                 'title',
                 'review',
-                'created_at'
             ],
             include: {
                 model: Song,
@@ -80,16 +112,16 @@ router.post('/login', (req, res) => {
             res.status(404).json({ message: 'No user in database with that name!'});
             return;
         }
-        if (!userData.passCheck(req.body.password)) {
+        if (!userData.checkPassword(req.body.password)) {
             res.status(400).json({ message: 'Invalid Password!' });
             return;
         }
         req.session.save(() => {
             req.session.loggedIn = true;
+            req.session.user_id = userData.id;
             req.session.name = userData.name;
             req.session.id = userData.id;
-
-            res.json({ user: userData, message: 'Logged In Successfully!' });
+            res.json({ message: `Logged In Successfully! User ID: ${req.session.user_id}` });
         });
     })
     .catch(err => {
@@ -142,6 +174,25 @@ router.delete('/:id', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
+});
+
+router.post('/sign-up', (req, res) => {
+    const { name, password, email } = req.body;
+
+    User.create({ name, password, email })
+        .then(userData => {
+            req.session.save(() => {
+                req.session.loggedIn = true;
+                req.session.user_id = userData.id;
+                req.session.name = userData.name;
+                req.session.id = userData.id;
+                res.json(userData);
+            });
+        })
+        .catch(err => {
+            console.error(err);
+            res.status(500).json(err);
+        });
 });
 
 module.exports = router;

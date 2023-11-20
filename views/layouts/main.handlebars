@@ -7,22 +7,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header>
-        <h1 >Review Site</h1>
+        <h1 >Album Review Zone</h1>
+        <i>You Can Also Review Songs</i>
          <nav>
-            <a href="/">home</a>
-            <a href="/albumsReview">albums</a>
-            <a href="/songReview">songs</a>
-            <a href="/artistReview">artists</a>
-            {{#if logged_in}}
-            <button type="button" class="btn btn-light" id="logout">logout</button>
-            <a href="/NewReview">genres</a>
-            <a href="/editReview">labels</a>
+            <a href="/">
+                <button type="button" class="btn btn-success" id="home">Home</button>
+            </a>
+             
+            {{#if loggedIn}}
+            <a href="/dash">
+                <button type="button" class="btn btn-primary" id="home">Dash</button>
+            </a>
+            <button type="button" class="btn btn-danger" id="logout">Log Out</button>
             {{else}}
-            <a href="/login">login</a>
+            <a href="/login">
+                <button type="button" class="btn btn-info" id="home">Log In</button>
+            </a>
             {{/if}}
         </nav>
     </header>
@@ -33,9 +38,10 @@
 
     <footer>
     {{#if logged_in}}
-    <script src="/public/js/logout.js"></script>
+
     {{/if}}
+
     </footer>
 </body>
-
+        <script src="/js/logout.js"></script>
 </html>

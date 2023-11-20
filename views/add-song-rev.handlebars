@@ -1,0 +1,30 @@
+<div class="d-flex">
+    <div class="card">
+        <h2 class="card-header">Add A New Song Review</h2>
+        <form class="card-body" id="songReviewForm">
+            <div class="form-row">
+                <label for="songName" class="form-label">Song Name</label>
+                <select id="songName" name="songName" class="form-input">
+                    {{#if songs.length}}
+                    {{#each songs as |song|}}
+                    <option value="{{song.id}}">{{song.name}} by {{song.album.artist.name}}</option>
+                    {{/each}}
+                    {{/if}}
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="songReviewTitle" class="form-label">Review Title</label>
+                <input type="text" id="songReviewTitle" name="songReviewTitle" class="form-input" />
+            </div>
+            <div class="form-row">
+                <label for="songReview" class="form-label">Review</label>
+                <input type="text" id="songReview" name="songReview" class="form-input" />
+            </div>
+            <div class="form-row">
+                <button type="submit" class="btn btn-success">Add Review</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="/js/addReview.js"></script>

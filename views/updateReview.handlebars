@@ -1,0 +1,23 @@
+<section>
+    {{#each songReviews as |songReview| }}
+         <form data-id="{{songReview.id}}">
+            <input type="text" id="songTitle" placeholder="Enter song title" value="{{songReview.song_id}}">
+            <input type="text" id="songReviewTitle" placeholder="Enter song review title" value="{{songReview.reviewTitle}}">
+            <textarea id="songReview" class="form-control" placeholder="Enter song review content">{{songReview.review}}</textarea>
+            <button type="button" class="btn btn-warning SongReviewUpdate">Update Song Review</button>
+        </form>
+    {{/each}}
+</section>
+<section>
+    {{#each albumReviews as |albumReview| }}
+        <form data-id="{{albumReview.id}}">
+            <input type="text" id="albumTitle" placeholder="Enter album title" value="{{album.title}}">
+            <input type="text" id="albumReviewTitle" placeholder="Enter album review title" value="{{albumReview.reviewTitle}}">
+            <textarea id="albumReview" class="form-control" placeholder="Enter album review content">{{albumReview.review}}</textarea>
+            <button type="button" class="btn btn-warning albumReviewUpdate">Update Album Review</button>
+        </form>
+    {{/each}}
+</section>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="/js/updateReview.js"></script>

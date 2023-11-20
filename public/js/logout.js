@@ -1,4 +1,4 @@
-document.getElementById('logoutBtn').addEventListener('click', function() {
+document.getElementById('logout').addEventListener('click', function() {
     logout();
 });
 const logout = async () => {
@@ -8,7 +8,8 @@ const logout = async () => {
     });
   
     if (response.ok) {
-      document.location.replace('/');
+      alert('logged out!');
+      document.location.replace('/login');
     } else {
       alert(response.statusText);
     }

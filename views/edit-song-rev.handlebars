@@ -1,0 +1,29 @@
+{{#each songReviews as |songReview|}}
+<div class="d-flex justify-content-center align-items-center">
+    <div class="card">
+        <h2 class="card-header text-center">Edit Your Review for {{songReview.song.name}} by {{songReview.song.artist.name}}</h2>
+        <form  class="card-body songReviewForm" data-id="{{songReview.id}}">
+            <div class="form-group row">
+                <label for="songReviewTitle" class="col-sm-12 col-form-label">Review Title</label>
+                <div class="col-sm-12">
+                    <input type="text" class="form-control songReviewTitle" value="{{songReview.title}}" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="songReview" class="col-sm-12 col-form-label">Review</label>
+                <div class="col-sm-12">
+                    <textarea class="form-control songReviewContent" rows="5">{{songReview.review}}</textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-primary songReviewUpdate">Edit Review</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{{/each}}
+
+<script src="/js/editReview.js"></script>
