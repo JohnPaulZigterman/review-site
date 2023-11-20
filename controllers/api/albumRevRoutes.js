@@ -82,7 +82,10 @@ try {
 });
 
 router.put('/:id', withAuth, (req, res) => {
-    AlbumReview.update(req.body, {
+    AlbumReview.update({
+        ...req.body,
+        user_id: req.session.user_id,
+    },{
         where: { 
             id: req.params.id,
             user_id: req.session.user_id

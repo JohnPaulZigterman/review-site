@@ -1,13 +1,12 @@
 <div class="d-flex">
-    <div class="card p-2">
+    <div class="card p-1">
         <div class="card-header group-header">
             <h1>Album Review</h1>
             <h5>{{sendAlbumRevData.album.name}}</h5>
             <p>by {{sendAlbumRevData.album.artist.name}}</p>
-            <img src="{{albumArtLink}}">
         </div>
         <div class="d-flex card-body group-body">
-            <div class="card p-2">
+            <div class="card p-1">
                 <section class="card-header">
                     <h5>{{sendAlbumRevData.title}}</h5>
                     <i>by {{sendAlbumRevData.user.name}}</i>
@@ -18,6 +17,7 @@
             </div>
         </div>
     </div>
+    <img src="{{albumArtLink}}" class="border-box">
 </div>
         
 

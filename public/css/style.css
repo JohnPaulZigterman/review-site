@@ -1,5 +1,9 @@
 body{ 
     background-color:lightyellow;
+    background-size: 10px 10px;
+    background-image:
+    linear-gradient(to right, lightgray, 2px, transparent 1px),
+    linear-gradient(to bottom, lightgrey 2px, transparent 1px);
 }
 
 header {
@@ -43,4 +47,10 @@ nav {
     background-color: lightgray;
     border: 2px solid black;
     border-top: 0px;
+}
+
+.border-box {
+    border: 2px solid black;
+    box-shadow: 3px 3px 3px;
+    background-color: beige;
 }
