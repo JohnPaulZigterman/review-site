@@ -1,4 +1,4 @@
-<section>
+<section class="d-flex justify-content-evenly align-items-center text-center">
     {{#each songReviews as |songReview| }}
          <form data-id="{{songReview.id}}">
             <input type="text" id="songTitle" placeholder="Enter song title" value="{{songReview.song_id}}">
@@ -8,7 +8,7 @@
         </form>
     {{/each}}
 </section>
-<section>
+<section class="d-flex justify-content-evenly align-items-center text-center">
     {{#each albumReviews as |albumReview| }}
         <form data-id="{{albumReview.id}}">
             <input type="text" id="albumTitle" placeholder="Enter album title" value="{{album.title}}">
