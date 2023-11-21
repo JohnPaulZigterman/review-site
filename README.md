@@ -19,42 +19,39 @@ Read more about ISC here:
 
 ## Description
 
-This application is a project assignment for the MSU Coding Bootcamp.
-In this project we were tasked with applying concepts learned throughout past modules to follow a given criteria. I as a user want to review ablums and songs of given artists.
+This is a project assignment for our MSU Fullstack Web Development Bootcamp. We created an album review site. For this application we used Visual Studio Code, Sequelize 6.3.5, MySQL12 2.2.5, NPM Packages, Express 4.17.1, Express-Handlebars 5.2.0,Bcrypt v5.0.0, Album-Art v3.2.1 Inquiere and Node.js. We wanted to create a simple website where users could easily share reviews of songs and albums in a micro-blog style.
 
-   
-
-## Deployed application
-- 
-
-![Demo](./utils/)
 
 ## Installation
 
 Required applications:
+
 - Visual Studio Code: (https://code.visualstudio.com/)
-- Git for MAC/Windows/Linux: (https://git-scm.com/downloads)
 - Sequelize 6.3.5: (https://www.npmjs.com/package/sequelize/v/6.3.5)
 - MySQL12 2.2.5: (https://www.mysql.com/)
 - NPM Packages: (https://www.npmjs.com/)
-- Express 4.17.1 
+- Express 4.17.1
 - Express-Handlebars 5.2.0
+- Bcrypt v5.0.0 
+- Album-Art v3.2.1
 - Node.js
+
 ## Usage
 
-To use, first install the above required applications in [Installation](#installation).
+![Image](<utils/Album Review Site.png>)
 
-- Clone the repository to your local machine.
-- After cloning the repository, open the directory using Visual Studio Code.
-- To view content used, expand the (PLACEHOLDER) folder. 
+To use:
+
+- Log in or create an account
+- Select album or Song to review 
+- Type your review
+
+
+
 
 
 ## Contributors:
-- Homework code source and instruction: https://git.bootcampcontent.com/Michigan-State-University/MSU-VIRT-FSF-PT-07-2023-U-LOLC
 
-- Homework help: 
-
-Group Participants:     
 - [John Paul Zigterman](https://github.com/JohnPaulZigterman)
 - [Musa Omar](https://github.com/musaomark01)
 - [Anthony Hrabowski](https://github.com/Ajhrabowski)
