@@ -1,4 +1,4 @@
-<div class="d-flex">
+<div class="d-flex justify-content-evenly align-items-center text-center">
     <div class="card p-1">
         <div class="card-header">
             <h1>{{sendUserData.name}}'s Dashboard</h1>
@@ -6,7 +6,7 @@
     </div>
 </div>
 
-<div class="d-flex">
+<div class="d-flex flex-wrap justify-content-evenly align-items-center text-center">
     <div class="card p-1">
         <div class="card-header group-header">
             <h1>Album Reviews</h1>
@@ -14,10 +14,10 @@
             <button type="button" class="btn btn-success btn-sm" id="new-albumreview-btn">Add New Review</button>
             </a>
         </div>
-        <div class="d-flex flex-wrap card-body group-body">
+        <div class="d-flex flex-wrap justify-content-left align-items-start text-center card-body group-body">
             {{#if sendUserData.albumreviews.length}}
             {{#each sendUserData.albumreviews as |albumreview| }}
-            <div class="card p-1 col-2">
+            <div class="card p-1">
                 <section class="card-header">
                     <h5>{{album.name}}</h5>
                     <i>{{album.artist.name}}</i>
@@ -38,7 +38,7 @@
 </div>
 
 
-<div class="d-flex">
+<div class="d-flex justify-content-evenly align-items-center text-center">
     <div class="card p-1">
         <div class="card-header group-header">
             <h1>Song Reviews</h1>
@@ -46,10 +46,10 @@
                 <button type="button" class="btn btn-success btn-sm" id="new-songreview-btn">Add New Review</button>
             </a>
         </div>
-        <div class="d-flex flex-wrap card-body group-body">
+        <div class="d-flex flex-wrap justify-content-left align-items-start text-center card-body group-body">
             {{#if sendUserData.songreviews.length}}
             {{#each sendUserData.songreviews as |songreview| }}
-            <div class="card p-1 col-2">
+            <div class="card p-1">
                 <section class="card-header">
                     <h5>{{song.name}}</h5>
                     <i>{{song.album.artist.name}}</i>

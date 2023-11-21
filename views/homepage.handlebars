@@ -1,7 +1,7 @@
-<div class="d-flex flex-wrap justify-content-center">
+<div class="d-flex flex-wrap justify-content-left align-items-start text-center">
     {{#if users.length}}
     {{#each users as |user| }}
-    <div class="card p-1 col-2">
+    <div class="card p-1">
         <section class="card-header user-card" data-id="{{user.id}}">
             <button class="user-card btn btn-lg btn-outline-dark border-box" data-id="{{user.id}}">{{user.name}}</button>
         </section>

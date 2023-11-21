@@ -12,23 +12,23 @@
 
 <body>
     <header>
-        <div class="border-box p-3">
+        <div class="border-box p-3 text-center">
         <h1 >Album Review Zone</h1>
         <i>You Can Also Review Songs</i>
         </div>
-         <nav>
+         <nav class="d-flex justify-content-evenly align-items-center text-center">
             <a href="/">
-                <button type="button" class="btn btn-success" id="home">Home</button>
+                <button type="button" class="btn btn-success shadow-lx" id="home">Home</button>
             </a>
              
             {{#if loggedIn}}
             <a href="/dash">
-                <button type="button" class="btn btn-primary" id="home">Dash</button>
+                <button type="button" class="btn btn-primary shadow-lx" id="home">Dash</button>
             </a>
-            <button type="button" class="btn btn-danger" id="logout">Log Out</button>
+            <button type="button" class="btn btn-danger shadow-lx" id="logout">Log Out</button>
             {{else}}
             <a href="/login">
-                <button type="button" class="btn btn-info" id="home">Log In</button>
+                <button type="button" class="btn btn-info shadow-lx" id="home">Log In</button>
             </a>
             {{/if}}
         </nav>

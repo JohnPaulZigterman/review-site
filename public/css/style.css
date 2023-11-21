@@ -4,6 +4,7 @@ body{
     background-image:
     linear-gradient(to right, lightgray, 2px, transparent 1px),
     linear-gradient(to bottom, lightgrey 2px, transparent 1px);
+    margin-left: 1%;
 }
 
 header {
@@ -14,6 +15,10 @@ header {
 nav {
     margin: 6px;
     padding: 6px;
+}
+
+button{
+    margin: 5px;
 }
 
 .card {
