@@ -33,6 +33,8 @@ button{
 }
 .card-body {
     background-color:antiquewhite;
+    
+
 }
 
 .card-footer {
@@ -58,4 +60,6 @@ button{
     border: 2px solid black;
     box-shadow: 3px 3px 3px;
     background-color: beige;
+  
 }
+
