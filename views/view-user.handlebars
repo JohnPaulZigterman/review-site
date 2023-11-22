@@ -6,15 +6,15 @@
     </div>
 </div>
 
-<div class="d-flex flex-wrap">
+<div class="d-flex flex-wrap justify-content-center align-items-start text-center ">
     <div class="card p-1">
         <div class="card-header group-header">
             <h1 class="border-box">Album Reviews</h1>
         </div>
-        <div class="card-body group-body d-flex flex-wrap">
+        <div class="card-body group-body d-flex flex-wrap justify-content-center align-items-start text-center">
             {{#if sendUserData.albumreviews.length}}
             {{#each sendUserData.albumreviews as |albumreview| }}
-            <div class="card p-1 col-2">
+            <div class="card p-1">
                 <section class="card-header album-rev-card" data-id="{{id}}">
                     <button class="album-rev-card btn btn-lg btn-outline-dark border-box" data-id="{{id}}">{{album.name}}</button>
                     <br>
@@ -32,15 +32,15 @@
 </div>
 
 
-<div class="d-flex flex-wrap">
+<div class="d-flex flex-wrap justify-content-center align-items-start text-center">
     <div class="card p-1">
         <div class="card-header group-header">
             <h1 class="border-box">Song Reviews</h1>
         </div>
-        <div class="card-body group-body d-flex flex-wrap">
+        <div class="card-body group-body d-flex flex-wrap justify-content-center align-items-start text-center">
             {{#if sendUserData.songreviews.length}}
             {{#each sendUserData.songreviews as |songreview| }}
-            <div class="card p-1 col-2">
+            <div class="card p-1">
                 <section class="card-header song-rev-card" data-id="{{id}}">
                     <button class="song-rev-card btn btn-lg btn-outline-dark border-box" data-id="{{id}}">{{song.name}}</button>
                     <br>
